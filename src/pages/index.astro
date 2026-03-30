@@ -3,6 +3,14 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { Image } from 'astro:assets';
+
+import heroImage from '../assets/hung/image.png';
+import vtvImage from '../assets/hung/image-1.png';
+import trainingImage from '../assets/hung/image-3.png';
+import communityImage from '../assets/hung/IMG_5224.JPG';
+import investorMeetingImage from '../assets/hung/586553226_1420907506707485_5494408194781805438_n.jpg';
+import bniImage from '../assets/hung/5b41c281-ee87-4477-b408-ead35a5bca8f.png';
 ---
 
 <!doctype html>
@@ -258,7 +266,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		<Header />
 		<main>
 			<section id="hero">
-				<img src="/images/hung/image.png" alt="Nguyễn Việt Hùng - Lúa Hóa Chứng Khoán" class="hero-image" />
+				<Image src={heroImage} alt="Nguyễn Việt Hùng - Lúa Hóa Chứng Khoán" class="hero-image" width={200} height={200} />
 				<h1>Lúa Hóa Chứng Khoán</h1>
 				<p class="intro-text">
 					Xin chào, tôi là <span class="accent-text">Nguyễn Việt Hùng</span>.<br/>
@@ -300,7 +308,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				<p style="max-width: 600px; color: #666;">
 					Chia sẻ kiến thức và nhận định thị trường trên các kênh truyền thông chính thống, giúp nhà đầu tư có cái nhìn khách quan và chính xác.
 				</p>
-				<img src="/images/hung/image-1.png" alt="Nguyễn Việt Hùng trên VTV Money" class="proof-image" />
+				<Image src={vtvImage} alt="Nguyễn Việt Hùng trên VTV Money" class="proof-image" width={800} height={450} />
 			</section>
 
 			<section id="services" style="background-color: #fafafa;">
@@ -329,19 +337,19 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				<div class="activity-grid">
 					<div class="activity-item">
 						<div class="image-wrapper">
-							<img src="/images/hung/image-3.png" alt="Giảng viên đào tạo tại các sự kiện lớn" />
+							<Image src={trainingImage} alt="Giảng viên đào tạo tại các sự kiện lớn" width={400} height={267} />
 						</div>
 						<p>Giảng viên đào tạo tại các sự kiện lớn</p>
 					</div>
 					<div class="activity-item">
 						<div class="image-wrapper">
-							<img src="/images/hung/IMG_5224.JPG" alt="Hoạt động cộng đồng và kết nối doanh nghiệp" />
+							<Image src={communityImage} alt="Hoạt động cộng đồng và kết nối doanh nghiệp" width={400} height={267} />
 						</div>
 						<p>Hoạt động cộng đồng và kết nối doanh nghiệp</p>
 					</div>
 					<div class="activity-item">
 						<div class="image-wrapper">
-							<img src="/images/hung/586553226_1420907506707485_5494408194781805438_n.jpg" alt="Gặp gỡ và chia sẻ cùng các nhà đầu tư" />
+							<Image src={investorMeetingImage} alt="Gặp gỡ và chia sẻ cùng các nhà đầu tư" width={400} height={267} />
 						</div>
 						<p>Gặp gỡ và chia sẻ cùng các nhà đầu tư</p>
 					</div>
@@ -353,7 +361,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				<p style="max-width: 600px; color: #666;">
 					Kiến thức và kinh nghiệm chỉ thực sự có giá trị khi được lan tỏa. Hãy kết nối để cùng nhau tạo nên một cộng đồng đầu tư văn minh.
 				</p>
-				<img src="/images/hung/5b41c281-ee87-4477-b408-ead35a5bca8f.png" alt="Nguyễn Việt Hùng tại BNI" class="proof-image" style="margin-bottom: var(--spacing-medium);" />
+				<Image src={bniImage} alt="Nguyễn Việt Hùng tại BNI" class="proof-image" style="margin-bottom: var(--spacing-medium);" width={800} height={450} />
 				<a href="https://blog.hocchungkhoan.com.vn" class="cta-button" target="_blank" rel="noopener noreferrer">Khám phá Blog của tôi</a>
 			</section>
 		</main>
