@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { SITE_DESCRIPTION, SITE_TITLE, ZALO_LINK } from '../consts';
 import { Image } from 'astro:assets';
 
 import heroImage from '../assets/hung/image.png';
@@ -166,6 +166,15 @@ import activity6 from '../assets/hung/activity-6.jpg';
 				color: var(--white);
 			}
 
+			.cta-button.secondary {
+				background-color: #25d366; /* Zalo/WhatsApp green */
+				box-shadow: 0 4px 14px 0 rgba(37, 211, 102, 0.2);
+			}
+
+			.cta-button.secondary:hover {
+				box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
+			}
+
 			.hero-image {
 				width: 200px;
 				height: 200px;
@@ -278,6 +287,10 @@ import activity6 from '../assets/hung/activity-6.jpg';
 				<p style="max-width: 600px; color: #666;">
 					Với kinh nghiệm thực chiến trên thị trường, tôi mang đến góc nhìn minh triết và thấu cảm để đồng hành cùng bạn trên hành trình nuôi dưỡng tài sản bền vững.
 				</p>
+				<div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+					<a href="/contact" class="cta-button">Liên hệ tư vấn</a>
+					<a href={ZALO_LINK} class="cta-button secondary" target="_blank" rel="noopener noreferrer">Kết nối Zalo</a>
+				</div>
 			</section>
 
 			<section class="featured-quote">
@@ -380,10 +393,13 @@ import activity6 from '../assets/hung/activity-6.jpg';
 			<section id="connect">
 				<h2>Cùng xây dựng cộng đồng</h2>
 				<p style="max-width: 600px; color: #666;">
-					Kiến thức và kinh nghiệm chỉ thực sự có giá trị khi được lan tỏa. Hãy kết nối để cùng nhau tạo nên một cộng đồng đầu tư văn minh.
+					Kiến thức và kinh nghiệm chỉ thực sự có giá trị khi được lan tỏa. Theo dõi tôi trên Zalo để nhận bản tin thị trường hàng ngày và những góc nhìn thực chiến.
 				</p>
 				<Image src={bniImage} alt="Nguyễn Việt Hùng tại BNI" class="proof-image" style="margin-bottom: var(--spacing-medium);" width={800} height={450} />
-				<a href="https://blog.hocchungkhoan.com.vn" class="cta-button" target="_blank" rel="noopener noreferrer">Khám phá Blog của tôi</a>
+				<div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+					<a href="https://blog.hocchungkhoan.com.vn" class="cta-button" target="_blank" rel="noopener noreferrer">Khám phá Blog của tôi</a>
+					<a href={ZALO_LINK} class="cta-button secondary" target="_blank" rel="noopener noreferrer">Nhận bản tin Zalo</a>
+				</div>
 			</section>
 		</main>
 		<Footer />

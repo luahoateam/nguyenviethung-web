@@ -7,3 +7,5 @@ export const COMPANY_NAME = 'SSI Securities';
 export const COMPANY_TAGLINE = 'Minh triết trong đầu tư, thấu cảm từ trải nghiệm thực chiến';
 export const COMPANY_EMAIL = 'hungnv2@ssi.com.vn';
 export const COMPANY_PHONE = '+84 986 206 379';
+export const COMPANY_ADDRESS = 'C014-015 The Manor - Vũ Quỳnh';
+export const ZALO_LINK = 'https://zalo.me/3114527713940100444';

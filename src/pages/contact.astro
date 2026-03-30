@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION, COMPANY_EMAIL, COMPANY_PHONE } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION, COMPANY_EMAIL, COMPANY_PHONE, COMPANY_ADDRESS, ZALO_LINK } from '../consts';
 ---
 
 <!doctype html>
@@ -126,8 +126,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, COMPANY_EMAIL, COMPANY_PHONE } from '../c
 					
 					<div class="info-item">
 						<h3>📍 Văn phòng làm việc</h3>
-						<p>SSI Office - Chi nhánh Mỹ Đình<br/>
-						Tòa nhà MD Complex, số 68 đường Nguyễn Cơ Thạch, KĐT Mỹ Đình 1, Q. Nam Từ Liêm, Hà Nội.</p>
+						<p>SSI Office - {COMPANY_ADDRESS}</p>
 					</div>
 
 					<div class="info-item">
@@ -141,7 +140,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, COMPANY_EMAIL, COMPANY_PHONE } from '../c
 						<div class="social-links">
 							<a href="https://www.facebook.com/hungnv1203/" class="social-button">Facebook</a>
 							<a href="https://www.youtube.com/@viethungluahoa" class="social-button">Youtube</a>
-							<a href="https://open.spotify.com/show/..." class="social-button">Spotify (Bữa sáng cho não)</a>
+							<a href={ZALO_LINK} class="social-button">Kết nối qua Zalo</a>
 						</div>
 					</div>
 				</div>
@@ -166,8 +165,8 @@ import { SITE_TITLE, SITE_DESCRIPTION, COMPANY_EMAIL, COMPANY_PHONE } from '../c
 
 				<div class="community-highlight">
 					<h2>Tham gia Cộng đồng Lúa Hóa</h2>
-					<p>Nơi chia sẻ kiến thức, kinh nghiệm và những góc nhìn thực chiến về thị trường chứng khoán Việt Nam.</p>
-					<a href="#" class="community-btn">Tham gia ngay trên Zalo/Facebook</a>
+					<p>Theo dõi tôi trên Zalo để nhận bản tin thị trường hàng ngày và những góc nhìn thực chiến về chứng khoán Việt Nam.</p>
+					<a href={ZALO_LINK} class="community-btn">Tham gia ngay trên Zalo</a>
 				</div>
 			</div>
 		</main>
