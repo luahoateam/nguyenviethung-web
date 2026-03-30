@@ -1,0 +1,176 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION, COMPANY_EMAIL, COMPANY_PHONE } from '../consts';
+---
+
+<!doctype html>
+<html lang="vi">
+	<head>
+		<BaseHead title={`Liên hệ | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: calc(100% - 2em);
+				max-width: var(--container-xl);
+				margin: 0 auto;
+				padding: var(--space-24) 0;
+			}
+			.contact-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: var(--space-12);
+				margin-top: var(--space-8);
+			}
+			@media (max-width: 768px) {
+				.contact-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+			.contact-info h2 {
+				color: var(--color-primary);
+				margin-bottom: var(--space-4);
+			}
+			.info-item {
+				margin-bottom: var(--space-6);
+			}
+			.info-item h3 {
+				font-size: 1.1rem;
+				margin-bottom: var(--space-2);
+			}
+			.social-links {
+				display: flex;
+				gap: 1rem;
+				margin-top: 1rem;
+			}
+			.social-button {
+				padding: 0.5rem 1rem;
+				background: #eee;
+				border-radius: 8px;
+				text-decoration: none;
+				color: #333;
+				font-size: 0.9rem;
+				transition: background 0.3s;
+			}
+			.social-button:hover {
+				background: var(--color-primary);
+				color: white;
+			}
+			
+			.contact-form {
+				background: #fdfdfd;
+				padding: var(--space-8);
+				border-radius: 12px;
+				box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+			}
+			.form-group {
+				margin-bottom: 1.5rem;
+			}
+			label {
+				display: block;
+				margin-bottom: 0.5rem;
+				font-weight: 500;
+			}
+			input, textarea {
+				width: 100%;
+				padding: 0.8rem;
+				border: 1px solid #ddd;
+				border-radius: 6px;
+				font-family: inherit;
+			}
+			button[type="submit"] {
+				background: var(--color-primary);
+				color: white;
+				border: none;
+				padding: 1rem 2rem;
+				border-radius: 6px;
+				cursor: pointer;
+				font-weight: 600;
+				width: 100%;
+			}
+			
+			.community-highlight {
+				grid-column: 1 / -1;
+				background: linear-gradient(135deg, var(--color-primary) 0%, #d4a017 100%);
+				color: white;
+				padding: var(--space-12);
+				border-radius: 16px;
+				text-align: center;
+				margin-top: var(--space-12);
+			}
+			.community-highlight h2 {
+				color: white;
+				margin-bottom: 1rem;
+			}
+			.community-btn {
+				display: inline-block;
+				margin-top: 1.5rem;
+				padding: 1rem 2.5rem;
+				background: white;
+				color: var(--color-primary);
+				text-decoration: none;
+				font-weight: bold;
+				border-radius: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Kết nối với chúng tôi</h1>
+			<p>Bạn có câu hỏi về đầu tư hoặc muốn tìm hiểu về triết lý Lúa Hóa? Đừng ngần ngại liên hệ.</p>
+
+			<div class="contact-grid">
+				<div class="contact-info">
+					<h2>Thông tin liên hệ</h2>
+					
+					<div class="info-item">
+						<h3>📍 Văn phòng làm việc</h3>
+						<p>SSI Office - Chi nhánh Mỹ Đình<br/>
+						Tòa nhà MD Complex, số 68 đường Nguyễn Cơ Thạch, KĐT Mỹ Đình 1, Q. Nam Từ Liêm, Hà Nội.</p>
+					</div>
+
+					<div class="info-item">
+						<h3>📞 Hotline & Email</h3>
+						<p>Phone: {COMPANY_PHONE}<br/>
+						Email: {COMPANY_EMAIL}</p>
+					</div>
+
+					<div class="info-item">
+						<h3>🌐 Theo dõi Lúa Hóa</h3>
+						<div class="social-links">
+							<a href="https://www.facebook.com/hungnv1203/" class="social-button">Facebook</a>
+							<a href="https://www.youtube.com/@viethungluahoa" class="social-button">Youtube</a>
+							<a href="https://open.spotify.com/show/..." class="social-button">Spotify (Bữa sáng cho não)</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="contact-form">
+					<form onsubmit="return false;">
+						<div class="form-group">
+							<label for="name">Họ và tên</label>
+							<input type="text" id="name" placeholder="Nhập tên của bạn" />
+						</div>
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" id="email" placeholder="email@example.com" />
+						</div>
+						<div class="form-group">
+							<label for="message">Lời nhắn</label>
+							<textarea id="message" rows="5" placeholder="Bạn muốn trao đổi điều gì?"></textarea>
+						</div>
+						<button type="submit">Gửi thông tin</button>
+					</form>
+				</div>
+
+				<div class="community-highlight">
+					<h2>Tham gia Cộng đồng Lúa Hóa</h2>
+					<p>Nơi chia sẻ kiến thức, kinh nghiệm và những góc nhìn thực chiến về thị trường chứng khoán Việt Nam.</p>
+					<a href="#" class="community-btn">Tham gia ngay trên Zalo/Facebook</a>
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
